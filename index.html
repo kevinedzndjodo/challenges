@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Payment Interaction</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body class="bg-gray-50">
+  <div class="container w-1/2 shadow-lg m-auto mt-24 rounded-2xl px-4 py-4">
+
+    <div class="period grid grid-cols-2 gap-2 p-1 bg-gray-100 rounded-full mb-6">
+      <div class="month text-center">
+        <button class="font-medium px-12 py-2 md:text-xl rounded-full focus:bg-white">Monthly</button>
+      </div>
+      <div class="year text-center">
+        <button class="font-medium px-14 py-2 md:text-xl rounded-full focus:bg-white">Yearly</button>
+      </div>
+    </div>
+
+    <div class="plans grid grid-cols-1 gap-4 items-center justify-center mb-4">
+
+      <div class="free border-2 border-gray-100 rounded-lg p-2">
+        <div class="flex justify-between items-center">
+          <label for="cb1" class="text-xl font-bold">Free</label>
+          <input type="radio" id="cb1" name="option" value="1"> 
+        </div>
+        <p class="period text-gray-600"><span class="text-black font-semibold">$0.00</span>/<span id="period-free">month</span></p>
+      </div>
+
+      <div class="starter border-2 border-gray-100 rounded-lg p-2 focus:border-black">
+        <div class="flex justify-between items-center">
+          <label for="cb2" class="text-xl font-bold mr-2">Starter<span class="bg-yellow-100 p-1 rounded-md mr-6 text-sm">Popular</span></label>
+          <input type="radio" id="cb2" name="option" value="2"> 
+        </div>
+        <p class="period text-gray-600"><span class="text-black font-semibold" id="starter-price">$7.49</span>/<span id="period-starter">month</span></p>
+      </div>
+
+      <div class="pro border-2 border-gray-100 rounded-lg p-2">
+        <div class="flex justify-between items-center">
+          <label for="cb1" class="text-xl font-bold">Pro</label>
+          <input type="radio" id="cb1" name="option" value="1"> 
+        </div>
+        <p class="period text-gray-600"><span class="text-black font-semibold" id="pro-price">$17.49</span>/<span id="period-pro">month</span></p>
+      </div>
+
+    </div>
+
+    <div class="start-btn flex justify-center items-center text-center">
+      <button class="flex-1 bg-black text-white text-center rounded-full p-2 hover:font-bold">Get Started</button>
+    </div>
+
+
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
